@@ -1,1 +1,92 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url("./assets/fonts/Gilroy-Bold.ttf"); }
+
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: url("./assets/fonts/Gilroy-Medium.ttf"); }
+
+@font-face {
+  font-family: 'Gilroy-Thin';
+  src: url("./assets/fonts/Gilroy-Thin.ttf"); }
+
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url("./assets/fonts/Gilroy-Light.ttf"); }
+
+body {
+  background-color: #0c232f;
+  margin: 0;
+  padding: 0; }
+
+#navbar {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  position: absolute;
+  width: 50px;
+  height: 100%; }
+
+#icon {
+  height: 100px; }
+  #icon a {
+    display: block; }
+  #icon img {
+    width: 28px;
+    margin: 11px 11px; }
+
+#menu .item_menu {
+  height: 20px;
+  width: 24px;
+  padding: 17px 12px; }
+  #menu .item_menu a {
+    display: block; }
+  #menu .item_menu img {
+    display: block; }
+
+#socials .item_social {
+  height: 20px;
+  width: 20px;
+  padding: 5px 15px; }
+  #socials .item_social:last-of-type {
+    padding-bottom: 15px; }
+  #socials .item_social a {
+    display: block; }
+  #socials .item_social img {
+    display: block; }
+
+#greeting {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  position: absolute;
+  margin-left: 100px;
+  height: 100%;
+  width: 400px;
+  color: white; }
+  #greeting h1 {
+    font-family: 'Gilroy-Bold';
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0; }
+  #greeting p {
+    font-family: 'Gilroy-Light';
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 10px;
+    margin-bottom: 20px; }
+  #greeting button {
+    height: 40px;
+    width: 138px;
+    border: 2px solid #47b9f5;
+    background: transparent;
+    margin: 0 auto;
+    cursor: pointer; }
+    #greeting button:last-of-type {
+      margin-left: 20px; }
+    #greeting button p {
+      font-family: 'Gilroy-Medium';
+      font-size: 16px;
+      line-height: 19px;
+      color: #47b9f5;
+      margin: 0; }
