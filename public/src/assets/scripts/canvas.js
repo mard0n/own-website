@@ -1,5 +1,4 @@
 export default function Canvas(){
-  console.log("works");
   var canvas = document.querySelector('canvas'),
     c = canvas.getContext('2d'),
     particles = [],
@@ -52,12 +51,10 @@ export default function Canvas(){
     };
   }
 
-  for (let index = 0; index < 500; index++) {
+  for (let index = 0; index < 400; index++) {
     var x = canvas.width / 4 * 3,
       y = canvas.height / 3,
-      radius = rand(0.01, 2);
-
-    console.log('x and y', x, y);
+      radius = rand(0.1, 2);
     particles.push(new Particle(x, y, radius));
   }
 
@@ -70,7 +67,6 @@ export default function Canvas(){
   });
 
   function animate() {
-    console.log("animate works");
     requestAnimationFrame(animate);
     if (md && alpha >= 0.1) {
       alpha -= 0.01;
@@ -83,7 +79,6 @@ export default function Canvas(){
     particles.forEach(particle => {
       particle.update();
     });
-    console.log("back");
   }
   animate();
 };

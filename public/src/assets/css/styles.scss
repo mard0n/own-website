@@ -45,6 +45,7 @@ body {
   z-index: 15;
   height: 100px;
   a {
+    background-color: #000000;
     display: block;
   }
   img {
@@ -111,20 +112,19 @@ body {
   }
   button {
     height: 40px;
-    width: 138px;
+    width: 180px;
     border: 2px solid #47b9f5;
     background: transparent;
     margin: 0 auto;
     cursor: pointer;
-
     &:last-of-type {
       margin-left: 20px;
     }
 
     p {
       font-family: 'Gilroy-Medium';
-      font-size: 16px;
-      line-height: 19px;
+      font-size: 20px;
+      line-height: 24px;
       color: #47b9f5;
       margin: 0;
     }
