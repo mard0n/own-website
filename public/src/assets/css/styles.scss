@@ -1,26 +1,68 @@
 $full_height: 768px;
 $full_width: 1536px;
+$width_what: 600px;
+$width_pic: 716px;
+$width_how: 600px;
+$width_how_item: 341px;
+$width_navbar: 50px;
+
 @font-face {
-  font-family: 'Gilroy-Bold';
+  font-family: 'G-Bold';
   src: url('./assets/fonts/Gilroy-Bold.ttf');
 }
 @font-face {
-  font-family: 'Gilroy-Medium';
+  font-family: 'G-Medium';
   src: url('./assets/fonts/Gilroy-Medium.ttf');
 }
 @font-face {
-  font-family: 'Gilroy-Thin';
-  src: url('./assets/fonts/Gilroy-Thin.ttf');
+  font-family: 'G-UltraLight';
+  src: url('./assets/fonts/Gilroy-UltraLight.ttf');
 }
 @font-face {
-  font-family: 'Gilroy-Light';
+  font-family: 'G-Light';
   src: url('./assets/fonts/Gilroy-Light.ttf');
 }
 
 body {
   background-color: #0c232f;
   margin: 0;
+  margin-left: 50px;
   padding: 0;
+}
+html,
+body {
+  min-height: 100% !important;
+  height: 100%;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+h1 {
+  font-family: 'G-Bold';
+  font-size: 50px;
+  color: #ffffff;
+  margin: 0;
+}
+h2 {
+  font-family: 'G-Bold';
+  font-size: 36px;
+  color: #ffffff;
+  margin: 0;
+}
+p {
+  font-family: 'G-UltraLight';
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+#scroll-place {
+  min-height: 100% !important;
+  max-height: 100%;
+  height: 100%;
+  overflow-x: visible;
 }
 
 #canvas {
@@ -36,53 +78,54 @@ body {
   flex-flow: column;
   justify-content: space-between;
   position: absolute;
-  width: 50px;
+  top: 0;
+  left: 0;
+  width: $width_navbar;
   height: 100%;
   background-color: #001723;
-}
-
-#icon {
-  z-index: 15;
-  height: 100px;
-  a {
-    background-color: #000000;
-    display: block;
-  }
-  img {
-    width: 28px;
-    margin: 11px 11px;
-  }
-}
-
-#menu {
-  z-index: 15;
-  .item_menu {
-    height: 20px;
-    width: 24px;
-    padding: 17px 12px;
+  #icon {
+    z-index: 15;
+    height: 100px;
     a {
+      background-color: #000000;
       display: block;
     }
     img {
-      display: block;
+      width: 28px;
+      margin: 11px 11px;
     }
   }
-}
 
-#socials {
-  z-index: 15;
-  .item_social {
-    height: 20px;
-    width: 20px;
-    padding: 5px 15px;
-    &:last-of-type {
-      padding-bottom: 15px;
+  #menu {
+    z-index: 15;
+    .item_menu {
+      height: 20px;
+      width: 24px;
+      padding: 17px 12px;
+      a {
+        display: block;
+      }
+      img {
+        display: block;
+      }
     }
-    a {
-      display: block;
-    }
-    img {
-      display: block;
+  }
+
+  #socials {
+    z-index: 15;
+    .item_social {
+      height: 20px;
+      width: 20px;
+      padding: 5px 15px;
+      &:last-of-type {
+        padding-bottom: 15px;
+      }
+      a {
+        display: block;
+      }
+      img {
+        display: block;
+      }
     }
   }
 }
@@ -93,21 +136,13 @@ body {
   flex-flow: column;
   justify-content: center;
   position: absolute;
-  margin-left: 150px;
+  margin-left: 100px;
   height: 100%;
   width: 400px;
   color: white;
   h1 {
-    font-family: 'Gilroy-Bold';
-    font-size: 36px;
-    line-height: 44px;
-    margin: 0;
-  }
-  p {
-    font-family: 'Gilroy-Light';
-    font-size: 18px;
-    line-height: 21px;
-    margin-top: 10px;
+    font-family: 'G-Bold';
+    font-size: 50px;
     margin-bottom: 20px;
   }
   button {
@@ -120,13 +155,11 @@ body {
     &:last-of-type {
       margin-left: 20px;
     }
-
     p {
-      font-family: 'Gilroy-Medium';
+      font-family: 'G-Medium';
       font-size: 20px;
       line-height: 24px;
       color: #47b9f5;
-      margin: 0;
     }
   }
 }
@@ -150,5 +183,123 @@ body {
     height: 550px;
     top: $full_height / 3;
     left: $full_width / 4 * 3;
+  }
+}
+
+#what,
+#how {
+  width: $width_what;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  .wrap {
+    width: 500px;
+    margin: 0 50px;
+  }
+  h1 {
+    margin: 0 0 10px 0;
+  }
+}
+
+#about_pic {
+  position: absolute;
+  left: $width_navbar + $width_what;
+  top: 0;
+  width: $width_pic;
+  height: 100%;
+  background-color: #fff;
+}
+
+#how {
+  position: absolute;
+  left: $width_navbar + $width_pic + $width_what;
+  top: 0;
+  width: $width_how;
+  height: 100%;
+}
+
+#how_items {
+  .how_item {
+    height: 100%;
+    width: $width_how_item;
+    position: absolute;
+    top: 0;
+    border: 1px solid #707070;
+    border-bottom: 0;
+    border-top: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+  #how_item1 {
+    left: $width_navbar + $width_what + $width_pic + $width_how;
+    background-color: #0f2d38;
+  }
+  #how_item2 {
+    left: $width_navbar + $width_what + $width_pic + $width_how + ($width_how_item);
+    background-color: #143b45;
+  }
+  #how_item3 {
+    left: $width_navbar + $width_what + $width_pic + $width_how + ($width_how_item * 2);
+    background-color: #194852;
+  }
+  #how_item4 {
+    left: $width_navbar + $width_what + $width_pic + $width_how + ($width_how_item * 3);
+    background-color: #143b45;
+  }
+  #how_item5 {
+    left: $width_navbar + $width_what + $width_pic + $width_how + ($width_how_item * 4);
+    background-color: #0f2d38;
+  }
+  #how_item6 {
+    left: $width_navbar + $width_what + $width_pic + $width_how + ($width_how_item * 5);
+    background-color: #143b45;
+  }
+  #how_item7 {
+    left: $width_navbar + $width_what + $width_pic + $width_how + ($width_how_item * 6);
+    background-color: #143b45;
+  }
+
+  .wrap {
+    margin: 0 auto;
+    h2 {
+      display: block;
+      width: 250px;
+      margin-bottom: 70px;
+      height: 88px;
+      position: relative;
+      span {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    p {
+      display: block;
+      width: 250px;
+      margin-bottom: 0;
+      height: 368px;
+    }
+  }
+
+  #how_item7 {
+    a {
+      height: 40px;
+      width: 180px;
+      border: 2px solid #47b9f5;
+      background: transparent;
+      margin: 0 auto;
+      cursor: pointer;
+      text-align: center;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      p {
+      font-family: 'G-Medium';
+      font-size: 20px;
+      line-height: 24px;
+      color: #47b9f5;
+    }
+    }
   }
 }

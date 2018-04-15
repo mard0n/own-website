@@ -1,23 +1,59 @@
 @font-face {
-  font-family: 'Gilroy-Bold';
+  font-family: 'G-Bold';
   src: url("./assets/fonts/Gilroy-Bold.ttf"); }
 
 @font-face {
-  font-family: 'Gilroy-Medium';
+  font-family: 'G-Medium';
   src: url("./assets/fonts/Gilroy-Medium.ttf"); }
 
 @font-face {
-  font-family: 'Gilroy-Thin';
-  src: url("./assets/fonts/Gilroy-Thin.ttf"); }
+  font-family: 'G-UltraLight';
+  src: url("./assets/fonts/Gilroy-UltraLight.ttf"); }
 
 @font-face {
-  font-family: 'Gilroy-Light';
+  font-family: 'G-Light';
   src: url("./assets/fonts/Gilroy-Light.ttf"); }
 
 body {
   background-color: #0c232f;
   margin: 0;
+  margin-left: 50px;
   padding: 0; }
+
+html,
+body {
+  min-height: 100% !important;
+  height: 100%; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+h1 {
+  font-family: 'G-Bold';
+  font-size: 50px;
+  color: #ffffff;
+  margin: 0; }
+
+h2 {
+  font-family: 'G-Bold';
+  font-size: 36px;
+  color: #ffffff;
+  margin: 0; }
+
+p {
+  font-family: 'G-UltraLight';
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+#scroll-place {
+  min-height: 100% !important;
+  max-height: 100%;
+  height: 100%;
+  overflow-x: visible; }
 
 #canvas {
   z-index: 1;
@@ -31,43 +67,42 @@ body {
   flex-flow: column;
   justify-content: space-between;
   position: absolute;
+  top: 0;
+  left: 0;
   width: 50px;
   height: 100%;
   background-color: #001723; }
-
-#icon {
-  z-index: 15;
-  height: 100px; }
-  #icon a {
-    background-color: #000000;
-    display: block; }
-  #icon img {
-    width: 28px;
-    margin: 11px 11px; }
-
-#menu {
-  z-index: 15; }
-  #menu .item_menu {
-    height: 20px;
-    width: 24px;
-    padding: 17px 12px; }
-    #menu .item_menu a {
+  #navbar #icon {
+    z-index: 15;
+    height: 100px; }
+    #navbar #icon a {
+      background-color: #000000;
       display: block; }
-    #menu .item_menu img {
-      display: block; }
-
-#socials {
-  z-index: 15; }
-  #socials .item_social {
-    height: 20px;
-    width: 20px;
-    padding: 5px 15px; }
-    #socials .item_social:last-of-type {
-      padding-bottom: 15px; }
-    #socials .item_social a {
-      display: block; }
-    #socials .item_social img {
-      display: block; }
+    #navbar #icon img {
+      width: 28px;
+      margin: 11px 11px; }
+  #navbar #menu {
+    z-index: 15; }
+    #navbar #menu .item_menu {
+      height: 20px;
+      width: 24px;
+      padding: 17px 12px; }
+      #navbar #menu .item_menu a {
+        display: block; }
+      #navbar #menu .item_menu img {
+        display: block; }
+  #navbar #socials {
+    z-index: 15; }
+    #navbar #socials .item_social {
+      height: 20px;
+      width: 20px;
+      padding: 5px 15px; }
+      #navbar #socials .item_social:last-of-type {
+        padding-bottom: 15px; }
+      #navbar #socials .item_social a {
+        display: block; }
+      #navbar #socials .item_social img {
+        display: block; }
 
 #greeting {
   z-index: 10;
@@ -75,20 +110,13 @@ body {
   flex-flow: column;
   justify-content: center;
   position: absolute;
-  margin-left: 150px;
+  margin-left: 100px;
   height: 100%;
   width: 400px;
   color: white; }
   #greeting h1 {
-    font-family: 'Gilroy-Bold';
-    font-size: 36px;
-    line-height: 44px;
-    margin: 0; }
-  #greeting p {
-    font-family: 'Gilroy-Light';
-    font-size: 18px;
-    line-height: 21px;
-    margin-top: 10px;
+    font-family: 'G-Bold';
+    font-size: 50px;
     margin-bottom: 20px; }
   #greeting button {
     height: 40px;
@@ -100,11 +128,10 @@ body {
     #greeting button:last-of-type {
       margin-left: 20px; }
     #greeting button p {
-      font-family: 'Gilroy-Medium';
+      font-family: 'G-Medium';
       font-size: 20px;
       line-height: 24px;
-      color: #47b9f5;
-      margin: 0; }
+      color: #47b9f5; }
 
 #images {
   z-index: 10; }
@@ -124,3 +151,107 @@ body {
     height: 550px;
     top: 256px;
     left: 1152px; }
+
+#what,
+#how {
+  width: 600px;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center; }
+  #what .wrap,
+  #how .wrap {
+    width: 500px;
+    margin: 0 50px; }
+  #what h1,
+  #how h1 {
+    margin: 0 0 10px 0; }
+
+#about_pic {
+  position: absolute;
+  left: 650px;
+  top: 0;
+  width: 716px;
+  height: 100%;
+  background-color: #fff; }
+
+#how {
+  position: absolute;
+  left: 1366px;
+  top: 0;
+  width: 600px;
+  height: 100%; }
+
+#how_items .how_item {
+  height: 100%;
+  width: 341px;
+  position: absolute;
+  top: 0;
+  border: 1px solid #707070;
+  border-bottom: 0;
+  border-top: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center; }
+
+#how_items #how_item1 {
+  left: 1966px;
+  background-color: #0f2d38; }
+
+#how_items #how_item2 {
+  left: 2307px;
+  background-color: #143b45; }
+
+#how_items #how_item3 {
+  left: 2648px;
+  background-color: #194852; }
+
+#how_items #how_item4 {
+  left: 2989px;
+  background-color: #143b45; }
+
+#how_items #how_item5 {
+  left: 3330px;
+  background-color: #0f2d38; }
+
+#how_items #how_item6 {
+  left: 3671px;
+  background-color: #143b45; }
+
+#how_items #how_item7 {
+  left: 4012px;
+  background-color: #143b45; }
+
+#how_items .wrap {
+  margin: 0 auto; }
+  #how_items .wrap h2 {
+    display: block;
+    width: 250px;
+    margin-bottom: 70px;
+    height: 88px;
+    position: relative; }
+    #how_items .wrap h2 span {
+      position: absolute;
+      bottom: 0; }
+  #how_items .wrap p {
+    display: block;
+    width: 250px;
+    margin-bottom: 0;
+    height: 368px; }
+
+#how_items #how_item7 a {
+  height: 40px;
+  width: 180px;
+  border: 2px solid #47b9f5;
+  background: transparent;
+  margin: 0 auto;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center; }
+  #how_items #how_item7 a p {
+    font-family: 'G-Medium';
+    font-size: 20px;
+    line-height: 24px;
+    color: #47b9f5; }
