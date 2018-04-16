@@ -3,6 +3,9 @@
   "extends": ["tslint:recommended"],
   "jsRules": {},
   "rules": {
+    "max-line-length": [
+      true, 1000
+    ],
     "no-console": false,
     "only-arrow-functions": false,
     "class-name": true,

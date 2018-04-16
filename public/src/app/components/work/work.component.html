@@ -1,3 +1,38 @@
-<p>
-  work works!
-</p>
+<div id="projects">
+  <div class="project" *ngFor="let project of projects" (click)="chosenProject(project)">
+    <div class="wrap">
+      <h3 class='title'>
+        {{project.title}}
+      </h3>
+      <h4 class='description'>
+        {{project.shortDescription}}
+      </h4>
+    </div>
+  </div>
+</div>
+
+<div id="specific_project">
+  <div id="project_info">
+    <div class="wrap">
+      <h2>
+        {{project.title}}
+      </h2>
+      <p>
+        {{project.fullDescription}}
+      </p>
+      <button id="visit_website">
+        <p>
+          Visit the website
+        </p>
+      </button>
+      <button id="discover_process">
+        <p>
+          Discover the process
+        </p>
+      </button>
+    </div>
+  </div>
+  <div id="project_photo">
+    <img src='{{project.mainPhotoUrl}}' alt="">
+  </div>
+</div>

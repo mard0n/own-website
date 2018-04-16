@@ -40,6 +40,18 @@ h2 {
   color: #ffffff;
   margin: 0; }
 
+h3 {
+  font-family: 'G-Bold';
+  font-size: 23px;
+  color: #ffffff;
+  margin: 0; }
+
+h4 {
+  font-family: 'G-Medium';
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0; }
+
 p {
   font-family: 'G-UltraLight';
   font-size: 18px;
@@ -53,7 +65,7 @@ a {
   min-height: 100% !important;
   max-height: 100%;
   height: 100%;
-  overflow-x: visible; }
+  overflow-x: hidden; }
 
 #canvas {
   z-index: 1;
@@ -239,19 +251,90 @@ a {
     margin-bottom: 0;
     height: 368px; }
 
-#how_items #how_item7 a {
+#how_items #how_item7 button {
   height: 40px;
   width: 180px;
   border: 2px solid #47b9f5;
   background: transparent;
   margin: 0 auto;
-  cursor: pointer;
-  text-align: center;
-  display: flex;
-  flex-flow: column;
-  justify-content: center; }
-  #how_items #how_item7 a p {
+  cursor: pointer; }
+  #how_items #how_item7 button p {
+    width: 100%;
     font-family: 'G-Medium';
     font-size: 20px;
-    line-height: 24px;
     color: #47b9f5; }
+
+#projects {
+  width: 200px; }
+  #projects .project {
+    height: 140px;
+    background: #002437;
+    border: 1px solid #000000;
+    display: flex;
+    flex-flow: column;
+    justify-content: center; }
+  #projects .wrap {
+    margin: 0 auto; }
+  #projects h3 {
+    margin: 0 0 10px 0; }
+  #projects h4 {
+    color: rgba(255, 255, 255, 0.5); }
+  #projects .chosenProject {
+    background-color: #001723;
+    position: relative; }
+    #projects .chosenProject:after {
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-bottom: 40px solid #47b9f5;
+      border-left: 40px solid transparent; }
+
+#specific_project {
+  background-color: #3db3d1;
+  position: absolute;
+  top: 0;
+  left: 250px;
+  height: 100%;
+  width: 85%;
+  display: flex;
+  justify-content: space-between; }
+  #specific_project #project_info {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center; }
+    #specific_project #project_info .wrap {
+      margin: 0 100px; }
+    #specific_project #project_info h2 {
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      width: 450px; }
+    #specific_project #project_info p {
+      width: 450px;
+      margin-bottom: 30px; }
+    #specific_project #project_info button {
+      height: 50px;
+      width: 200px;
+      background-color: #fff;
+      border: 0;
+      cursor: pointer; }
+      #specific_project #project_info button:first-of-type {
+        margin-right: 50px; }
+      #specific_project #project_info button p {
+        font-family: 'G-Light';
+        width: 100%;
+        display: block;
+        color: #3db3d1;
+        margin: 0; }
+  #specific_project #project_photo {
+    height: 100%;
+    width: 500px;
+    z-index: 30;
+    display: flex;
+    flex-flow: column;
+    justify-content: center; }
+    #specific_project #project_photo img {
+      object-fit: contain; }

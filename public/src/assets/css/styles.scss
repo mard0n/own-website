@@ -49,6 +49,18 @@ h2 {
   color: #ffffff;
   margin: 0;
 }
+h3 {
+  font-family: 'G-Bold';
+  font-size: 23px;
+  color: #ffffff;
+  margin: 0;
+}
+h4 {
+  font-family: 'G-Medium';
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+}
 p {
   font-family: 'G-UltraLight';
   font-size: 18px;
@@ -62,7 +74,7 @@ a {
   min-height: 100% !important;
   max-height: 100%;
   height: 100%;
-  overflow-x: visible;
+  overflow-x: hidden;
 }
 
 #canvas {
@@ -237,27 +249,33 @@ a {
     background-color: #0f2d38;
   }
   #how_item2 {
-    left: $width_navbar + $width_what + $width_pic + $width_how + ($width_how_item);
+    left: $width_navbar + $width_what + $width_pic + $width_how +
+      ($width_how_item);
     background-color: #143b45;
   }
   #how_item3 {
-    left: $width_navbar + $width_what + $width_pic + $width_how + ($width_how_item * 2);
+    left: $width_navbar + $width_what + $width_pic + $width_how +
+      ($width_how_item * 2);
     background-color: #194852;
   }
   #how_item4 {
-    left: $width_navbar + $width_what + $width_pic + $width_how + ($width_how_item * 3);
+    left: $width_navbar + $width_what + $width_pic + $width_how +
+      ($width_how_item * 3);
     background-color: #143b45;
   }
   #how_item5 {
-    left: $width_navbar + $width_what + $width_pic + $width_how + ($width_how_item * 4);
+    left: $width_navbar + $width_what + $width_pic + $width_how +
+      ($width_how_item * 4);
     background-color: #0f2d38;
   }
   #how_item6 {
-    left: $width_navbar + $width_what + $width_pic + $width_how + ($width_how_item * 5);
+    left: $width_navbar + $width_what + $width_pic + $width_how +
+      ($width_how_item * 5);
     background-color: #143b45;
   }
   #how_item7 {
-    left: $width_navbar + $width_what + $width_pic + $width_how + ($width_how_item * 6);
+    left: $width_navbar + $width_what + $width_pic + $width_how +
+      ($width_how_item * 6);
     background-color: #143b45;
   }
 
@@ -283,23 +301,116 @@ a {
   }
 
   #how_item7 {
-    a {
+    button {
       height: 40px;
       width: 180px;
       border: 2px solid #47b9f5;
       background: transparent;
       margin: 0 auto;
       cursor: pointer;
-      text-align: center;
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
+
       p {
-      font-family: 'G-Medium';
-      font-size: 20px;
-      line-height: 24px;
-      color: #47b9f5;
+        width: 100%;
+        font-family: 'G-Medium';
+        font-size: 20px;
+        color: #47b9f5;
+      }
     }
+  }
+}
+
+#projects {
+  width: 200px;
+  .project {
+    height: 140px;
+    background: #002437;
+    border: 1px solid #000000;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+  .wrap {
+    margin: 0 auto;
+  }
+  h3 {
+    margin: 0 0 10px 0;
+  }
+  h4 {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .chosenProject {
+    background-color: #001723;
+    position: relative;
+    &:after {
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-bottom: 40px solid #47b9f5;
+      border-left: 40px solid transparent;
+    }
+  }
+}
+
+#specific_project {
+  background-color: #3db3d1;
+  position: absolute;
+  top: 0;
+  left: $width_navbar + 200px;
+  height: 100%;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  #project_info {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    .wrap {
+      margin: 0 100px;
+    }
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      width: 450px;
+    }
+    p {
+      width: 450px;
+      margin-bottom: 30px;
+    }
+    button {
+      height: 50px;
+      width: 200px;
+      background-color: #fff;
+      border: 0;
+      cursor: pointer;
+      &:first-of-type {
+        margin-right: 50px;
+      }
+      p {
+        font-family: 'G-Light';
+        width: 100%;
+        display: block;
+        color: #3db3d1;
+        margin: 0;
+      }
+    }
+  }
+  #project_photo {
+    // position: absolute;
+    // top: 0;
+    // left: $width_navbar + 200px + 450px + 200px;
+    height: 100%;
+    width: 500px;
+    z-index: 30;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    img {
+      object-fit: contain;
     }
   }
 }
