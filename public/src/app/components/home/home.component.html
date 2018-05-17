@@ -1,26 +1,27 @@
-<div id="greeting">
-  <div class="wrap">
-    <h1>
-       Hi, I'm Mardon, <br> I design & build <br> landing pages
-    </h1>
-    <button id="link_contact" routerLink="/contact">
-      <p>
-        I need a website
-      </p>
-    </button>
-    <button id="link_about" routerLink="/about">
-      <p>
-        Learn more
-      </p>
-    </button>
+<div id="home_page">
+  <div id="greeting">
+    <div class="wrap">
+      <h1>
+        Hi, I'm Mardon.
+        <br> I design & build <br>
+        <a routerLink="/skill" routerLinkActive="active" class="typewrite" data-period="2000" data-type='[ "user interfaces.", "landing pages.", "corporate websites."]'>
+          <span class="wrap"></span>
+        </a>
+      </h1>
+
+      <button id="link_contact" routerLink="/about">
+        <p>
+          Learn more
+        </p>
+      </button>
+    </div>
   </div>
+
+  <div id="images">
+    <img id="moon" src="../assets/images/moon.svg" alt="moon">
+    <img id="man" src="../assets/images/manOnCliff.svg" alt="man">
+  </div>
+
+  <canvas id="canvas"></canvas>
+
 </div>
-
-<div id="images">
-  <img id="moon" src="../assets/images/moon.svg" alt="moon">
-  <img id="man" src="../assets/images/manOnCliff.svg" alt="man">
-</div>
-
-<canvas id="canvas">
-
-</canvas>

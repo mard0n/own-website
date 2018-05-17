@@ -5,9 +5,19 @@
     </a>
   </div>
   <div id="menu">
+    <div id="menu_home" class="item_menu">
+      <a routerLink="/home" routerLinkActive="active">
+        <img src="../assets/images/Icons/menu_home.svg" alt="home">
+      </a>
+    </div>
     <div id="menu_about" class="item_menu">
       <a routerLink="/about" routerLinkActive="active">
         <img src="../assets/images/Icons/menu_about.svg" alt="about">
+      </a>
+    </div>
+    <div id="menu_skill" class="item_menu">
+      <a routerLink="/skill" routerLinkActive="active">
+        <img src="../assets/images/Icons/menu_skill.svg" alt="skill">
       </a>
     </div>
     <div id="menu_work" class="item_menu">
@@ -40,6 +50,4 @@
   </div>
 </div>
 
-<div id="scroll-place">
-  <router-outlet></router-outlet>
-</div>
+<router-outlet (activate)="onActivate($event)"></router-outlet>
